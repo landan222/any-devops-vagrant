@@ -90,8 +90,8 @@
       group: vagrant
       mount_options:
         - "dmode=777,fmode=666"
-    - src: "./../landan-cicd_devops-ansible"
-      dest: "/home/vagrant/www/landan-cicd_devops-ansible"
+    - src: "./../landan.cicd_all_devops.ansible"
+      dest: "/home/vagrant/www/landan.cicd_all_devops.ansible"
       owner: vagrant
       group: vagrant
       mount_options:
