@@ -51,13 +51,13 @@
   synced_folders:
     - src: "./../" # Vagrantfile 位置为基准
       # src: "./../../projects" # Vagrantfile 位置为基准
-      dest: "/home/vagrant/www"
+      dest: "/var/www"
       owner: vagrant
       group: vagrant
       mount_options:
         - "dmode=777,fmode=666"
     - src: "./../any-cicd_playbook_devops-ansible"
-      dest: "/home/vagrant/www/any-cicd_playbook_devops-ansible"
+      dest: "/var/www/any-cicd_playbook_devops-ansible"
       owner: vagrant
       group: vagrant
       mount_options:
@@ -85,13 +85,13 @@
   synced_folders:
     - src: "./../" # Vagrantfile 位置为基准
       # src: "./../../projects" # Vagrantfile 位置为基准
-      dest: "/home/vagrant/www"
+      dest: "/var/www"
       owner: vagrant
       group: vagrant
       mount_options:
         - "dmode=777,fmode=666"
     - src: "./../any-cicd_playbook_devops-ansible"
-      dest: "/home/vagrant/www/any-cicd_playbook_devops-ansible"
+      dest: "/var/www/any-cicd_playbook_devops-ansible"
       owner: vagrant
       group: vagrant
       mount_options:
@@ -183,7 +183,7 @@
   synced_folders:
     - src: "./../" # Vagrantfile 位置为基准
       # src: "./../../projects" # Vagrantfile 位置为基准
-      dest: "/home/vagrant/www"
+      dest: "/var/www"
       owner: vagrant
       group: vagrant
       mount_options:
@@ -207,7 +207,7 @@
   synced_folders:
     - src: "./../" # Vagrantfile 位置为基准
       # src: "./../../projects" # Vagrantfile 位置为基准
-      dest: "/home/vagrant/www"
+      dest: "/var/www"
       owner: vagrant
       group: vagrant
       mount_options:
@@ -269,7 +269,7 @@
   synced_folders:
     - src: "./../" # Vagrantfile 位置为基准
       # src: "./../../projects" # Vagrantfile 位置为基准
-      dest: "/home/vagrant/www"
+      dest: "/var/www"
       owner: vagrant
       group: vagrant
       mount_options:
@@ -293,7 +293,7 @@
       host: 22052    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
   synced_folders:
     - src: "../../projects"
-      dest: "/home/vagrant/www"
+      dest: "/var/www"
       owner: vagrant
       group: vagrant
       mount_options:
@@ -436,7 +436,7 @@
   synced_folders:
     - src: "./../" # Vagrantfile 位置为基准
       # src: "./../../projects" # Vagrantfile 位置为基准
-      dest: "/home/vagrant/www"
+      dest: "/var/www"
       owner: vagrant
       group: vagrant
       mount_options:
@@ -460,7 +460,7 @@
   synced_folders:
     - src: "./../" # Vagrantfile 位置为基准
       # src: "./../../projects" # Vagrantfile 位置为基准
-      dest: "/home/vagrant/www"
+      dest: "/var/www"
       owner: vagrant
       group: vagrant
       mount_options:
@@ -486,7 +486,7 @@
   synced_folders:
     - src: "./../" # Vagrantfile 位置为基准
       # src: "./../../projects" # Vagrantfile 位置为基准
-      dest: "/home/vagrant/www"
+      dest: "/var/www"
       owner: vagrant
       group: vagrant
       mount_options:
@@ -512,7 +512,7 @@
   synced_folders:
     - src: "./../" # Vagrantfile 位置为基准
       # src: "./../../projects" # Vagrantfile 位置为基准
-      dest: "/home/vagrant/www"
+      dest: "/var/www"
       owner: vagrant
       group: vagrant
       mount_options:
@@ -623,7 +623,7 @@
   synced_folders:
     - src: "./../" # Vagrantfile 位置为基准
       # src: "./../../projects" # Vagrantfile 位置为基准
-      dest: "/home/vagrant/www"
+      dest: "/var/www"
       owner: vagrant
       group: vagrant
       mount_options:
@@ -733,7 +733,7 @@
   synced_folders:
     - src: "./../" # Vagrantfile 位置为基准
       # src: "./../../projects" # Vagrantfile 位置为基准
-      dest: "/home/vagrant/www"
+      dest: "/var/www"
       owner: vagrant
       group: vagrant
       mount_options:
@@ -894,7 +894,7 @@
   synced_folders:
     - src: "./../" # Vagrantfile 位置为基准
       # src: "./../../projects" # Vagrantfile 位置为基准
-      dest: "/home/vagrant/www"
+      dest: "/var/www"
       owner: vagrant
       group: vagrant
       mount_options:
