@@ -3,8 +3,8 @@
 - name: one
   status: 'on' # single
   box: centos/7
-  cpus: 1
-  memory: 512
+  cpus: 2
+  memory: 2048
   shells:
     - path: yum-update.sh
     - path: echo-id_rsa-to-ssh.sh
@@ -890,7 +890,7 @@
       desc: 01-to-04
   forwarded_ports:
     - guest: 22     # SSH
-      host: 22191    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
+      host: 22181    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
   synced_folders:
     - src: "./../" # Vagrantfile 位置为基准
       # src: "./../../projects" # Vagrantfile 位置为基准
@@ -914,7 +914,7 @@
       desc: 01-to-04
   forwarded_ports:
     - guest: 22     # SSH
-      host: 22192    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
+      host: 22182    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
 - name: mysql-3
   status: 'off' # multiple
   box: centos/7
@@ -930,7 +930,7 @@
       desc: 01-to-04
   forwarded_ports:
     - guest: 22     # SSH
-      host: 22193    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
+      host: 22183    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
 ##  二级 mysql (10.0.0.201 ~ 10.0.0.209)
 - name: mysql-1_1
   status: 'off' # multiple
@@ -947,7 +947,7 @@
       desc: 01-to-04
   forwarded_ports:
     - guest: 22     # SSH
-      host: 22201    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
+      host: 22191    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
 - name: mysql-1_2
   status: 'off' # multiple
   box: centos/7
@@ -963,7 +963,7 @@
       desc: 01-to-04
   forwarded_ports:
     - guest: 22     # SSH
-      host: 22202    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
+      host: 22192    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
 - name: mysql-2_1
   status: 'off' # multiple
   box: centos/7
@@ -979,7 +979,7 @@
       desc: 01-to-04
   forwarded_ports:
     - guest: 22     # SSH
-      host: 22203    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
+      host: 22193    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
 - name: mysql-2_2
   status: 'off' # multiple
   box: centos/7
@@ -995,7 +995,7 @@
       desc: 01-to-04
   forwarded_ports:
     - guest: 22     # SSH
-      host: 22204    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
+      host: 22194    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
 - name: mysql-3_1
   status: 'off' # multiple
   box: centos/7
@@ -1011,7 +1011,7 @@
       desc: 01-to-04
   forwarded_ports:
     - guest: 22     # SSH
-      host: 22205    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
+      host: 22195    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
 - name: mysql-3_2
   status: 'off' # multiple
   box: centos/7
@@ -1027,7 +1027,7 @@
       desc: 01-to-04
   forwarded_ports:
     - guest: 22     # SSH
-      host: 22206    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
+      host: 22196    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
       
 ##  零级 mysql (10.0.0.181 ~ 10.0.0.189)
 - name: cluster_ndb-1
@@ -1045,7 +1045,7 @@
       desc: 01-to-04
   forwarded_ports:
     - guest: 22     # SSH
-      host: 22181    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
+      host: 22201    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
 
 - name: cluster_ndb-2
   status: 'off' # multiple
@@ -1062,7 +1062,7 @@
       desc: 01-to-04
   forwarded_ports:
     - guest: 22     # SSH
-      host: 22182    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
+      host: 22202    # 一旦有换 SSH port 情形 vagrant up 的 ssh 会失效
 
 ##  一级mongodb (10.0.0.211 ~ 10.0.0.219)
 - name: mongodb-1
