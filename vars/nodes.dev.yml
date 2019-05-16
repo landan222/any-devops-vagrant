@@ -38,6 +38,8 @@
       host: 443
     - guest: 5601   # Kibana
       host: 5601
+    - guest: 6379   # Redis
+      host: 6379
     - guest: 9001   # Supervisor Web GUI
       host: 9001
     - guest: 9229   # Node Inspector
