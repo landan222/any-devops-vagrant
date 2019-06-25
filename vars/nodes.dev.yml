@@ -57,13 +57,13 @@
       owner: vagrant
       group: vagrant
       mount_options:
-        - "dmode=777,fmode=666"
+        - "dmode=777,fmode=777"
     - src: "./../any-cicd_playbook_devops-ansible"
       dest: "/var/www/any-cicd_playbook_devops-ansible"
       owner: vagrant
       group: vagrant
       mount_options:
-        - "dmode=775,fmode=664"
+        - "dmode=775,fmode=775"
         # dmode配置目录权限，fmode配置文件权限  //默认权限777
         # ansible/ansible.cfg 必须设定为不可写入
 
