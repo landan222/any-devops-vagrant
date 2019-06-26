@@ -80,6 +80,15 @@
         # dmode配置目录权限，fmode配置文件权限  //默认权限777
         # ansible/ansible.cfg 必须设定为不可写入
 
+    # - src: "./../" # Vagrantfile 位置为基准
+    #   # src: "./../../projects" # Vagrantfile 位置为基准
+    #   type: "nfs"
+    #   dest: "/var/www"
+    #   owner: vagrant
+    #   group: vagrant
+    #   mount_options:
+    #     - "dmode=777,fmode=777"
+
 ## cicd (10.0.0.21 ~ 10.0.0.29)
 - name: ansible
   status: 'off' # multiple
