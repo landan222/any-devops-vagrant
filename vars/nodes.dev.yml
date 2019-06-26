@@ -89,6 +89,14 @@
     #   mount_options:
     #     - "dmode=777,fmode=777"
 
+    # - src: "./../any-cicd_playbook_devops-ansible"
+    #   dest: "/var/www/any-cicd_playbook_devops-ansible"
+    #   type: "nfs"
+    #   owner: vagrant
+    #   group: vagrant
+    #   mount_options:
+    #     - "dmode=777,fmode=777"
+
 ## cicd (10.0.0.21 ~ 10.0.0.29)
 - name: ansible
   status: 'off' # multiple
