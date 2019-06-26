@@ -54,12 +54,28 @@ Vagrant.configure(2) do |config|
 	      if node["synced_folders"]
 	        synced_folders = node["synced_folders"]
 	        synced_folders.each do |synced_folder|
-	          subconfig.vm.synced_folder synced_folder["src"], 
-	          synced_folder["dest"], 
-	          type: synced_folder["type"], 
-	          owner: synced_folder["owner"], 
-	          group: synced_folder["group"], 
-	          mount_options: synced_folder["mount_options"]
+	          if synced_folder["src"] == "smb"
+
+	            subconfig.vm.synced_folder synced_folder["src"], 
+	          	  synced_folder["dest"], 
+	          	  smb_password: synced_folder["smb_password"], 
+	          	  smb_username: synced_folder["smb_username"],
+	          	  type: synced_folder["type"], 
+	          	  owner: synced_folder["owner"], 
+	          	  group: synced_folder["group"], 
+	          	  mount_options: synced_folder["mount_options"]
+	          end
+
+	          if synced_folder["src"] == "nfs"
+
+	            subconfig.vm.synced_folder synced_folder["src"], 
+	          	  synced_folder["dest"], 
+	          	  type: synced_folder["type"], 
+	          	  owner: synced_folder["owner"], 
+	          	  group: synced_folder["group"], 
+	          	  mount_options: synced_folder["mount_options"]
+	          end
+
 	        end
 	      end
         
