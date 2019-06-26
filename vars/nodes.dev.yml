@@ -51,51 +51,51 @@
     - guest: 27017  # MongoDB 
       host: 27017
   synced_folders:
-    - src: "./../" # Vagrantfile 位置为基准
-      # src: "./../../projects" # Vagrantfile 位置为基准
-      dest: "/var/www"
-      type: "smb"
-      smb_password: "ntU0000!"
-      smb_username: "landa"
-      owner: vagrant
-      group: vagrant
-      mount_options:
-        - "username=landa"
-        - "password=ntU0000!"
-        - "mfsymlinks"
-        - "dir_mode=0777"
-        - "file_mode=0777"
-    - src: "./../any-cicd_playbook_devops-ansible"
-      dest: "/var/www/any-cicd_playbook_devops-ansible"
-      type: "smb"
-      smb_password: "ntU0000!"
-      smb_username: "landa"
-      owner: vagrant
-      group: vagrant
-      mount_options:
-        - "username=landa"
-        - "password=ntU0000!"
-        - "dir_mode=0755"
-        - "file_mode=0755"
-        # dmode配置目录权限，fmode配置文件权限  //默认权限777
-        # ansible/ansible.cfg 必须设定为不可写入
-
     # - src: "./../" # Vagrantfile 位置为基准
     #   # src: "./../../projects" # Vagrantfile 位置为基准
-    #   type: "nfs"
     #   dest: "/var/www"
+    #   type: "smb"
+    #   smb_password: "ntU0000!"
+    #   smb_username: "landa"
     #   owner: vagrant
     #   group: vagrant
     #   mount_options:
-    #     - "dmode=777,fmode=777"
-
+    #     - "username=landa"
+    #     - "password=ntU0000!"
+    #     - "mfsymlinks"
+    #     - "dir_mode=0777"
+    #     - "file_mode=0777"
     # - src: "./../any-cicd_playbook_devops-ansible"
     #   dest: "/var/www/any-cicd_playbook_devops-ansible"
-    #   type: "nfs"
+    #   type: "smb"
+    #   smb_password: "ntU0000!"
+    #   smb_username: "landa"
     #   owner: vagrant
     #   group: vagrant
     #   mount_options:
-    #     - "dmode=777,fmode=777"
+    #     - "username=landa"
+    #     - "password=ntU0000!"
+    #     - "dir_mode=0755"
+    #     - "file_mode=0755"
+    #     # dmode配置目录权限，fmode配置文件权限  //默认权限777
+    #     # ansible/ansible.cfg 必须设定为不可写入
+
+    - src: "./../" # Vagrantfile 位置为基准
+      # src: "./../../projects" # Vagrantfile 位置为基准
+      type: "nfs"
+      dest: "/var/www"
+      owner: vagrant
+      group: vagrant
+      mount_options:
+        - "dmode=777,fmode=777"
+
+    - src: "./../any-cicd_playbook_devops-ansible"
+      dest: "/var/www/any-cicd_playbook_devops-ansible"
+      type: "nfs"
+      owner: vagrant
+      group: vagrant
+      mount_options:
+        - "dmode=775,fmode=775"
 
 ## cicd (10.0.0.21 ~ 10.0.0.29)
 - name: ansible
