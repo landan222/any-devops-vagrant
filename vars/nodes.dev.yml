@@ -54,12 +54,16 @@
     - src: "./../" # Vagrantfile 位置为基准
       # src: "./../../projects" # Vagrantfile 位置为基准
       dest: "/var/www"
+      type: "nfs"
       owner: vagrant
       group: vagrant
       mount_options:
         - "dmode=777,fmode=777"
+        - "username=landa"
+        - "password=ntU0000!"
     - src: "./../any-cicd_playbook_devops-ansible"
       dest: "/var/www/any-cicd_playbook_devops-ansible"
+      type: "nfs"
       owner: vagrant
       group: vagrant
       mount_options:
