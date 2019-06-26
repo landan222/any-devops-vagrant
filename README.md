@@ -155,7 +155,8 @@ vagrant ssh-config
 [*]. 注意事项
 ```shell
 vagrant 必须更新 windows 版本
-vagrant up 在 Windows OS 必须使用 Administrator 执行, 避免 npm node_modules 的 symbolic link 失败
+vagrant up 在 Windows OS 必须使用 Administrator 执行, 避免 npm node_modules 的 symbolic link 失败 (不可使用 vagrant reload)
+
 ```
 
 ---------------------------------------
