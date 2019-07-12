@@ -46,6 +46,8 @@
       host: 9001
     - guest: 9229   # Node Inspector
       host: 9229
+    - guest: 9230   # Node Inspector
+      host: 9230
     - guest: 9222   # Chrome debug
       host: 9222
     - guest: 9200   # Elasticsearch 
