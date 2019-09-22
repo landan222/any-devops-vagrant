@@ -95,8 +95,8 @@
       mount_options:
         - "dmode=777,fmode=777"
 
-    - src: "./../any-cicd_playbook_devops-ansible"
-      dest: "/var/www/any-cicd_playbook_devops-ansible"
+    - src: "./../any-devops-ansible"
+      dest: "/var/www/any-devops-ansible"
       type: "nfs"
       owner: vagrant
       group: vagrant
