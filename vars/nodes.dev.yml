@@ -44,6 +44,8 @@
       host: 6379
     - guest: 8080   # 8080
       host: 8080
+    - guest: 8181   # 8181
+      host: 8181
     - guest: 9001   # Supervisor Web GUI
       host: 9001
     - guest: 9229   # Node Inspector
